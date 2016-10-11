@@ -27,6 +27,7 @@
 		<script src="js/app/app.js"></script>
 		<script src="js/app/bootstrap.js"></script>
 		<script src="js/lib/jquery.mobile.js"></script>
+		<script src="index.js"></script>
 		<style>
 			.ui-selectmenu.ui-popup .ui-input-search {
 				margin-left: .5em;
@@ -69,6 +70,10 @@
 				<button>Results</button>
 				 </a>
 				<br/>
+				<a href="#camera"  id="capturePhoto"  data-transition="pop">
+				<button> Camera</button>
+				 </a>
+				<br />
 			</div><!-- /content -->
 		</div><!-- /page -->
 
@@ -130,7 +135,8 @@
 				<br />
 			</div><!-- /content -->
 		</div><!-- /page -->
-	</body>
+		
+		
 	<script>
 		$.mobile.document
 		// "filter-menu-menu" is the ID generated for the listview when it is created
