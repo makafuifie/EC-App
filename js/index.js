@@ -1,4 +1,4 @@
-(function{
+(function(){
 	document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 	var pictureSource;
 	var destinationType;
@@ -12,22 +12,20 @@
 				destinationType: destinationType.DATA_URL
 			});
 		}
+		document.getElementById("scan").onclick =barcodeScanner();
 	};
 	function onPhotoDataSuccess(imageData){
 		var smallImage = document.getElementById("smallImage");
 		smallImage.style.display =('smallImage');
 		
-		smallImage.src = "data:image/jpeg;base64,"+imageData);
+		smallImage.src = "data:image/jpeg;base64,"+imageData;
 	}
 	function onFail(message){
 		alert('Failed because: ' + message);
 	}
-
-
-})();
-
 function barcodeScanner(){
-	cordova.plugins.barcodeScanner.scan(
+	alert("success")
+	 cordova.plugins.barcodeScanner.scan(
       function (result) {
           alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
@@ -38,4 +36,7 @@ function barcodeScanner(){
           alert("Scanning failed: " + error);
       }
    );
-}
+};
+
+})();
+
